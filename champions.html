@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Champions</title>
+
+    <style>
+        body {
+            background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7cbd37c5-cdc5-4c8d-8682-5866976f5a60/d6vzxjq-92504808-2a65-44d7-8840-cf4fd163ec63.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdjYmQzN2M1LWNkYzUtNGM4ZC04NjgyLTU4NjY5NzZmNWE2MFwvZDZ2enhqcS05MjUwNDgwOC0yYTY1LTQ0ZDctODg0MC1jZjRmZDE2M2VjNjMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.uBa3NyDyTpzw-8lo1nB-wtYTnNQkDMSQZdW6hY46JFE");
+            max-width: 100%;
+            height: auto;
+            background-attachment: fixed;
+            background-size: cover;
+           
+            
+          
+        }
+
+        img {
+            padding: 0;
+            max-height: 100%;
+            min-width: 100%;
+            border-radius: 20px;
+        }
+
+        .container {
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 200px);
+            grid-template-rows: repeat(2, 400px);
+            grid-gap: 180px;
+            grid-template-columns: min-content 2fr max-content;
+            grid-template-columns: auto auto;
+            padding-left: 80px;
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        .picture {
+            width: 500px;
+        }
+        
+        h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+        }
+        .text {
+            background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7d3e9253-f3a3-423b-b606-50a6b5b7d92e/de0bb86-5295f51f-8dc9-426c-9ca4-d2968f4f170a.png/v1/fill/w_386,h_228,strp/league_of_legends_cam_frame_by_jackgoldwind_de0bb86-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjI4IiwicGF0aCI6IlwvZlwvN2QzZTkyNTMtZjNhMy00MjNiLWI2MDYtNTBhNmI1YjdkOTJlXC9kZTBiYjg2LTUyOTVmNTFmLThkYzktNDI2Yy05Y2E0LWQyOTY4ZjRmMTcwYS5wbmciLCJ3aWR0aCI6Ijw9Mzg2In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.BKOM18DcE7EUifDCTVen_IWc2HEN1Rrywy1LT_iC6hI");
+            background-repeat: round;
+            background-size: cover;
+            width: 620px;
+            height: 200px;
+            padding-bottom: 30px;
+            margin-top: 170px;
+            text-align: center;
+            padding-right: 40px;
+            padding-left: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+            color: whitesmoke;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="YanMenu" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+
+            &times;</a>
+        <a href="champions.html">Champions</a>
+        <a href="runes.html">Runes</a>
+        <a href="costumes.html">Costumes</a>
+
+    </div>
+
+    <div id="main">
+        <span style="font-size:40px; cursor:pointer" onclick="openNav()">
+            &#9776; </span>
+    </div>
+
+    <div class="container">
+
+        <div class="picture">
+            <img style="width: 680px;"
+                src="https://playerbros.com/wp-content/uploads/2018/03/miss-fortune-kost%C3%BCm-e1521755705512.jpg">
+        </div>
+        <div class="text">
+            <h1 style="color: rgb(245, 112, 134);">Miss Fortune</h1>
+            <span style="color: whitesmoke">
+                Güzelliğiyle gözlere bayram ettiren, acımasızlığıyla yüreklere dehşet salan Bilgewater'lı kaptan Sarah
+                Fortune, yaşadığı liman şehrinin pişkin suçlularıyla tezat bir tablo çiziyor. Çocukluğunda yağmacı kral
+                Gangplank'in ailesini katlettiğine tanık oldu ve yıllar sonra kralın gemisini havaya uçurarak gaddarca
+                intikam almayı bildi. Onu hafife alanların, karşılarında kurnaz ve sağı solu belli olmayan bir hasım...
+                ve muhtemelen karınlarında bir iki kurşun bulacağı kesin.
+            </span>
+        </div>
+
+        <div class="picture">
+            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rengar_2.jpg">
+        </div>
+        <div class="text">
+            <h1 style="color: rgb(105, 105, 230);">Rengar</h1>
+            <span style="color: whitesmoke">
+                Rengar tehlikeli yaratıkların izini sürüp onları öldürmenin hazzı için yaşayan vahşi bir vastaya ganimet
+                avcısı. En tehlikeli canavarları, özellikle de gözünü oyan Hiçlik yaratığı Kha'Zix'i bulmak için
+                dünyanın altını üstüne getiriyor. Rengar avlarının peşine karnını doyurmak ya da şöhret için değil,
+                sadece kovalamacanın güzelliği için düşüyor.
+            </span>
+        </div>
+
+        <div class="picture">
+            <img style="width: 680px;" src="https://i.hizliresim.com/mJmYy0.jpg" alt="">
+        </div>
+        <div class="text">
+            <h1 style="color: rgb(47, 218, 189);">Thresh</h1>
+            <span style="color: whitesmoke">
+                Zalim ve kurnaz Thresh, Gölge Adalar'da varlığını sürdüren hırslı ve huzursuz bir ruh. Bir zamanlar
+                sayısız büyülü sırrın koruyucusuyken yaşam ve ölümden bile daha büyük bir gücün peşine düşmüş ve artık
+                insanlara yavaş ve dayanılmaz işkenceler ederek kendisini besliyor. Ebediyete kadar işkence etmek için
+                fenerine hapsettiği ruhlara korkunç ıstıraplar çektirerek kurbanlarını ölmekten beter ediyor.
+            </span>
+        </div>
+
+        <div class="picture">
+            <img style="width: 680px;" src="https://img.fanatik.com.tr/img/78/740x418/5ea420ea66a97c6375104e48.jpg">
+        </div>
+        <div class="text">
+            <h1 style="color: rgb(42, 189, 164);">Hecarim</h1>
+            <span style="color: whitesmoke">
+                Hecarim, sonsuza dek yaşayanların ruhlarının peşine düşmekle lanetlenmiş, insan ve hayvanın korkunç bir
+                birleşimi. Kutlu Adalar gölgelere yenik düşmeden önce bu gururlu şövalye, emrindeki süvariler ve
+                atlarıyla birlikte Afet'in yıkıcı enerjileri tarafından paramparça edildi. Artık ne zaman Kara Sis
+                Runeterra'da belirse, bu harap edici hücuma önderlik ederek düşmanlarını zırhlı toynaklarıyla eziyor ve
+                katliamın tadını çıkarıyor.
+            </span>
+        </div>
+
+        <div class="picture">
+            <img style="width: 680px;"
+                src="https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt9202e1cf0f60853c/5f7f79f9ee00c80ec595b0b8/lux_skin01.jpg">
+        </div>
+        <div class="text">
+            <h1 style="color: rgb(227, 230, 89);">Lux</h1>
+            <span style="color: whitesmoke">
+                Luxanna Crownguard, büyü yeteneklerine korku ve şüpheyle yaklaşılan ve içine kapalı bir ülke olan
+                Demacia'dan geliyor. Işığı kendi iradesiyle şekillendirebilen Lux, fark edilmekten ve sürgüne
+                gönderilmekten korkarak büyüdü ve ailesinin soylu statüsünü koruyabilmesi için gücünü saklamak zorunda
+                kaldı. Yine de iyimserliği ve dayanıklılığı ona kendine has yeteneklerini benimseme imkânı tanıdı ve
+                artık bu gücünü gizliden gizliye anavatanına hizmet etmek için kullanıyor.
+            </span>
+        </div>
+
+        <div class="picture">
+            <img style="width: 680px;" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_10.jpg">
+        </div>
+        <div class="text">
+            <h1 style="color: rgb(224, 71, 71);">Yasuo</h1>
+            <span style="color: whitesmoke">
+                Büyük azme sahip bir Ionia'lı olan Yasuo, havanın gücünü düşmanlarına karşı kullanan çevik bir savaşçı.
+                Gençliğinin mağrur günlerinde haksız yere ustasını katletmekle suçlanmış ve masumiyetini
+                kanıtlayamayınca kendisini korumak için ağabeyini öldürmek zorunda kalmıştı. Ustasının gerçek katili gün
+                yüzüne çıksa da Yasuo yaptıkları için kendini affedemedi ve şimdilerde sadece kılıcına rehberlik eden
+                rüzgârın peşinde vatanının topraklarını arşınlıyor.
+            </span>
+        </div>
+
+        <div class="picture">
+            <img style="width: 680px;" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_9.jpg">
+        </div>
+        <div class="text">
+            <h1 style="color: rgb(105, 105, 245);">Ashe</h1>
+            <span style="color: whitesmoke">
+                Avarosa Kabilesi'nin Buzdoğan savaş anası Ashe, kuzeyin en kalabalık güruhuna komutanlık ediyor.
+                Metanetli, zeki, idealist ama liderlik vazifesinden de bir o kadar rahatsız olan Ayaz Okçu, soyunun
+                atadan kalma büyülerini kullanarak Gerçek Buz'dan bir yaya hükmediyor. Halkının onun efsanevi savaşçı
+                Avarosa'nın yeniden doğmuş hali olduğuna dair inancını arkasına alan Ashe, kadim kabile topraklarını
+                yeniden ele geçirerek Freljord'u bir kez daha birleştirmeyi umut ediyor.
+            </span>
+        </div>
+
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("YanMenu").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+
+        }
+
+        function closeNav() {
+            document.getElementById("YanMenu").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+
+        }
+    </script>
+</body>
+
+</html>

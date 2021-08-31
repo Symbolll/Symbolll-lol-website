@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale, maximum-scale=1.0" />
+    <link rel="icon"
+        href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/4c1f33da-daf4-4357-9e24-d4908eb9b1cc/d8fgb24-bc1d6d1a-f72b-4f79-96a9-96290a08a90b.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sIm9iaiI6W1t7InBhdGgiOiIvaS80YzFmMzNkYS1kYWY0LTQzNTctOWUyNC1kNDkwOGViOWIxY2MvZDhmZ2IyNC1iYzFkNmQxYS1mNzJiLTRmNzktOTZhOS05NjI5MGEwOGE5MGIuanBnIn1dXX0.lWMzABa8VETOPCXLtW33wBYY5vKK6ABRwK8Jm9V8pH4"
+        type="image/x-icon" />
+    <title>League of Legends World</title>
+    <style>
+        body {
+            background-image: url("https://wallpapermemory.com/uploads/710/thresh-league-of-legends-wallpaper-ultra-hd-4k-171060.jpg");
+            max-width: 100%;
+            height: auto;
+            max-width: 1200px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        @media only screen and (max-device-width: 600px) {
+            body {
+                background-image: url('https://mfiles.alphacoders.com/501/501739.png');
+                max-width: 100%;
+                height: auto;
+                background-size: cover;
+            }
+            .logo{
+                width: 100%;
+            }
+            .box1{
+                width: 50%;
+                max-height: 7%; 
+                border-width: 20px;
+                font-size: 25px;
+            }
+          
+        }
+
+        .box1 {
+            width: 40%;
+            height: 13%;
+            text-align: center;
+            background-color: black;
+            opacity: 0.7;
+            border-style: double;
+            border-color: cornsilk;
+            border-width: 10px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin-left: -20%;
+            margin-top: -3%;
+        }
+
+        .logo {
+            position: relative;
+            padding-left: 0.5%;
+        }
+
+        /*slidebar codes*/
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            position: relative;
+            color: whitesmoke;
+            padding-left: 1%;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="logo">
+        <img style="width: 15%;"
+            src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/signup/tr_TR/385a96b283273b8e4d53891affa5ab3738b8ab31/assets/tr_TR/assets/lol-logo.png" />
+    </div>
+
+    <div class="box1">
+        <h1 style="color: whitesmoke; font-family: serif;">Welcome to the League of Legends World</h1>
+    </div>
+
+    <!--slidebar kodları-->
+
+    <div id="YanMenu" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times;</a>
+        <a href="champions.html" target="_blank">Champions </a>
+        <a href="runes.html" target="_blank">Runes </a>
+        <a href="costumes.html" target="_blank">Costumes </a>
+
+    </div>
+
+    <div id="main">
+        <span style="font-size:40px;cursor:pointer" onclick="openNav()">
+            &#9776; </span>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("YanMenu").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            document.body.style.opacity = "0.8";
+        }
+
+        function closeNav() {
+            document.getElementById("YanMenu").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+
+</body>
+
+</html>
